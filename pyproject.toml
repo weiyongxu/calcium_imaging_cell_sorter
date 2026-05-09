@@ -9,7 +9,7 @@ description = "Desktop GUI for reviewing calcium-imaging cellsets and exporting 
 readme = "README.md"
 requires-python = ">=3.10"
 authors = [
-  { name = "Calcium Imaging Cell Sorter Contributors" }
+  { name = "Weiyong Xu", email = "weiyong.w.xu@jyu.fi" }
 ]
 license = "MIT"
 dependencies = [
