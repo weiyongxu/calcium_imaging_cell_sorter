@@ -6,14 +6,15 @@ from pathlib import Path
 
 from calcium_imaging_cell_sorter import ReviewInputs, launch_review
 
-DATA_DIR = Path(r"\\fileservices.ad.jyu.fi\CommonShare\psy-hica\Weiyong_Backup\CFC_Females\processed_data\000")
+# Replace this with the path to your actual data directory
+DATA_DIR = Path(r"C:\path\to\your\data")
 
 CELLSETS = [
-    DATA_DIR / "2022-10-24-09-26-54_video-PP-BP-MC-cnmfe-cellset-0.75-10.isxd",
-    DATA_DIR / "2022-10-24-10-16-38_video-PP-BP-MC-cnmfe-cellset-0.75-10.isxd",
+    DATA_DIR / "session-1-cellset.isxd",
+    DATA_DIR / "session-2-cellset.isxd",
 ]
-MAXDFF = DATA_DIR / "day 5-maxdff.isxd"
-OUTPUT = Path(__file__).resolve().parent / "000_day5_two_session_review.csv"
+MAXDFF = DATA_DIR / "matching-maxdff.isxd"
+OUTPUT = Path(__file__).resolve().parent / "review_output.csv"
 
 
 def main() -> int:

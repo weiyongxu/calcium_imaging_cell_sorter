@@ -7,3 +7,4 @@ build/
 dist/
 examples/*_review.csv
 examples/*.log
+examples/*jyu*.py

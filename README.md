@@ -2,6 +2,7 @@
 
 Small standalone desktop GUI for reviewing Inscopix cellset `.isxd` files.
 
+![Calcium Imaging Cell Sorter GUI](docs/GUI_screenshot.png)
 Use it to open one or more cellsets, inspect each cell image, max-dFF overlay, and calcium trace, then save accepted/rejected/undecided decisions to a sidecar CSV and ISXD files.
 
 ## Install
@@ -27,8 +28,8 @@ Then choose your input files in the GUI:
 1. Add one or more cellset `.isxd` files that were processed together and contain the same identified cells.
 2. Choose the matching max-dFF `.isxd` image for those sessions.
 3. Choose an output CSV path.
-4. Click **Open Review**.
-5. Sort cells and click **Save CSV**.
+4. Click **Initialize Review Session**.
+5. Sort cells using the on-screen buttons or keyboard shortcuts, then click **Save CSV**.
 
 The app rejects arbitrary pairings. Multi-session cellsets must contain the same identified cells and share the same field of view. The max-dFF image must match that same field of view, and any day metadata that is present must agree.
 
@@ -39,6 +40,7 @@ Only click **Apply to ISXD** when you intentionally want to write the current st
 Other Python scripts can launch the GUI through a simple input schema instead of building CLI arguments:
 
 ```python
+import sys
 from calcium_imaging_cell_sorter import ReviewInputs, launch_review
 
 inputs = ReviewInputs.from_paths(
@@ -48,7 +50,7 @@ inputs = ReviewInputs.from_paths(
     read_only=True,
 )
 
-raise SystemExit(launch_review(inputs=inputs))
+sys.exit(launch_review(inputs=inputs))
 ```
 
 This package expects the caller script to decide which files belong together. The GUI validates that the selected cellsets share the same identified cells and that the max-dFF image matches the same field of view.
@@ -95,6 +97,13 @@ The review buttons also show these shortcuts:
 | Jump to cell number | `J` |
 | Save CSV | `Ctrl+S` |
 | Apply to ISXD | `Ctrl+Shift+A` |
+
+### Plot Navigation
+
+The review panel includes a standard Matplotlib toolbar at the top:
+- Use the **Pan tool** (crossed arrows) to scroll through long calcium traces.
+- Use the **Zoom-to-Rectangle tool** (magnifying glass) to inspect specific spikes.
+- Use the **Home button** to reset the view.
 
 ## Test
 
