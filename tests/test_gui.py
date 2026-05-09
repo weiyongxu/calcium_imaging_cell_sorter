@@ -12,7 +12,7 @@ def test_main_window_constructs_without_loaded_data():
 
     from calcium_imaging_cell_sorter.gui import MainWindow
 
-    app = QApplication.instance() or QApplication(sys.argv)
+    _app = QApplication.instance() or QApplication(sys.argv)
     window = MainWindow()
 
     assert window.windowTitle() == "Calcium Imaging Cell Sorter"
@@ -39,7 +39,7 @@ def test_load_inputs_prefills_form_without_opening_when_maxdff_missing():
     from calcium_imaging_cell_sorter.gui import MainWindow
     from calcium_imaging_cell_sorter.inputs import ReviewInputs
 
-    app = QApplication.instance() or QApplication(sys.argv)
+    _app = QApplication.instance() or QApplication(sys.argv)
     window = MainWindow()
     window.load_inputs(ReviewInputs.from_paths(["C:/data/session-a.isxd"]))
 

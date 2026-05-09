@@ -5,7 +5,7 @@ from pathlib import Path
 import numpy as np
 import pytest
 
-from calcium_imaging_cell_sorter.model import ReviewState, VALID_STATUSES
+from calcium_imaging_cell_sorter.model import ReviewState
 
 
 def _make_state(
