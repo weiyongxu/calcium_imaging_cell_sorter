@@ -1,5 +1,7 @@
 # Calcium Imaging Cell Sorter
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24089476.svg)](https://doi.org/10.5281/zenodo.24089476)
+
 Small standalone desktop GUI for reviewing Inscopix cellset `.isxd` files.
 
 ![Calcium Imaging Cell Sorter GUI](docs/GUI_screenshot.png)
@@ -110,3 +112,10 @@ The review panel includes a standard Matplotlib toolbar at the top:
 ```powershell
 uv run pytest
 ```
+
+## Citing
+
+Cite the app with its DOI,
+[10.5281/zenodo.24089476](https://doi.org/10.5281/zenodo.24089476), which always
+leads to the newest version. Zenodo also gives each version its own DOI, and
+[CITATION.cff](CITATION.cff) has the full reference.
