@@ -17,6 +17,7 @@ authors:
     email: weiyong.w.xu@jyu.fi
     affiliation: "Department of Psychology, University of Jyväskylä, Finland"
     orcid: "https://orcid.org/0000-0003-4453-9836"
+doi: 10.5281/zenodo.24089476
 repository-code: "https://github.com/weiyongxu/calcium_imaging_cell_sorter"
 license: MIT
 version: "0.1.0"
